@@ -25,7 +25,6 @@ class ArticleTest extends TestCase
         $user = factory(User::class)->create();
         $article->likes()->attach($user);
         $result = $article->isLikedBy($user);
-
         $this->assertTrue($result);
     }
 }
